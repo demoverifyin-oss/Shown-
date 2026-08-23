@@ -195,6 +195,8 @@ async def auto_firebase(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("✅ Auto Mode Finished!")
     return ConversationHandler.END
 
+BOT_TOKEN = "8947734043:AAHMQfwMDLqaGSA3qG1mdBvcsPoMJv9_YZs"
+
 def main(token):
     init_db()
     app = Application.builder().token(token).build()
@@ -225,14 +227,6 @@ def main(token):
     app.add_handler(CallbackQueryHandler(lambda u, c: u.effective_message.reply_text("Usage: /set_code <YOUR_CODE>"), pattern='^set_code$'))
 
     print(f"Bot started. Powered by {BRANDING}")
-    app.run_polling()
-
-BOT_TOKEN = "8947734043:AAHMQfwMDLqaGSA3qG1mdBvcsPoMJv9_YZs"
-
-def main():
-    init_db()
-    app = Application.builder().token(BOT_TOKEN).build()
-    # ...
     app.run_polling()
 
 if __name__ == "__main__":
