@@ -227,9 +227,13 @@ def main(token):
     print(f"Bot started. Powered by {BRANDING}")
     app.run_polling()
 
+BOT_TOKEN = "8947734043:AAHMQfwMDLqaGSA3qG1mdBvcsPoMJv9_YZs"
+
+def main():
+    init_db()
+    app = Application.builder().token(BOT_TOKEN).build()
+    # ...
+    app.run_polling()
+
 if __name__ == "__main__":
-    import sys
-    if len(sys.argv) > 1:
-        main(sys.argv[1])
-    else:
-        print("Usage: python -m src.bot YOUR_BOT_TOKEN")
+    main()
