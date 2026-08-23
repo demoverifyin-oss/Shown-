@@ -1,48 +1,3 @@
-#!/usr/bin/env python3
-"""
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🚀 MACCARON REFERRAL BOT - ULTIMATE PRO EDITION 🚀
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Developed & Enhanced by: @prime5d
-Original Logic: Tanmay
-
-Welcome to the most advanced Maccaron.in referral automation tool. This script has been 
-completely rebuilt to provide 100% logic parity with the original while introducing 
-professional upgrades for stability, speed, and a better Telegram UI.
-
-🌟 KEY FEATURES:
-━━━━━━━━━━━━━━━━━━━━
-✅ FULL LOGIC PARITY: Preserves all deep Firebase extraction and parallel worker logic.
-✅ INTERACTIVE UI: Modern Telegram interface with inline buttons and progress updates.
-✅ DEEP EXTRACTION: Robustly unzips and scans APKs for hidden Firebase credentials.
-✅ SQLITE VAULT: Securely stores referral codes and provides detailed statistics.
-✅ TEMP-MAIL AUTOMATION: Fully automated account creation and email verification.
-✅ PARALLEL EXECUTION: High-speed referral generation using asynchronous workers.
-
-🛠️ SETUP INSTRUCTIONS:
-━━━━━━━━━━━━━━━━━━━━━━━
-1. Install Python 3.8 or higher.
-2. Install required libraries:
-   pip install httpx python-telegram-bot
-3. Run the script:
-   python MaccaronPro_prime5d.py YOUR_BOT_TOKEN
-
-📜 COMMANDS:
-━━━━━━━━━━━━
-/start    - Launch the bot and see the menu.
-/set_code - Save your referral code to the vault.
-/refer    - Start a manual referral (step-by-step).
-/auto     - Start the Auto Firebase Parallel Mode.
-/stats    - View your referral success history.
-
-⚠️ DISCLAIMER:
-━━━━━━━━━━━━━━
-This tool is for educational purposes only. Use it responsibly.
-
-Made with ❤️ by @prime5d
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-"""
 
 import os
 import sys
@@ -59,7 +14,8 @@ import argparse
 import base64
 from dataclasses import dataclass, field
 from typing import Any, List, Dict, Tuple, Optional, Iterable, Set
-
+from datetime import datetime
+from dotenv import load_dotenv
 import httpx
 
 # --- Telegram Imports ---
